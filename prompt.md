@@ -1,3 +1,5 @@
+#project prompt 
+
 Read CLAUDE.md and CONTEXT.md completely before making any changes.
 
 This is a new project. Build the complete Fitness Recommendation App from scratch exactly according to the specifications in both files.
