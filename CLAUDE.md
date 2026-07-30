@@ -1,5 +1,8 @@
 # CLAUDE.md
 
+test
+
+
 This file documents the current state of this repository exactly as it exists today. It is a
 descriptive reference, not a set of instructions — nothing in this file was changed to produce it.
 
