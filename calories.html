@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Insights - Calories</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="calories">
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="home.html" class="nav-brand">🌿 Fitness Insights</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="workout.html">Workout</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="calories.html">Calories</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="level.html">Level</a></li>
+    </ul>
+    <div class="nav-user" id="nav-user-badge"></div>
+  </div>
+</nav>
+
+<div class="container page-shell">
+  <div class="page-header">
+    <h1>Your Calorie Targets</h1>
+    <p>Calculated from the Mifflin-St Jeor equation using your stored profile.</p>
+  </div>
+
+  <div class="profile-summary-grid" style="margin-bottom:24px;">
+    <div class="profile-stat"><span class="stat-label">Weight</span><span class="stat-value" id="calories-weight">-</span></div>
+    <div class="profile-stat"><span class="stat-label">Height</span><span class="stat-value" id="calories-height">-</span></div>
+    <div class="profile-stat"><span class="stat-label">BMI</span><span class="stat-value" id="calories-bmi">-</span></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h2>BMR</h2>
+      <p style="font-size:1.5rem; font-weight:800; color:var(--color-primary-dark);" id="calories-bmr">-</p>
+      <p>Calories your body burns at complete rest.</p>
+    </div>
+    <div class="card">
+      <h2>Maintenance</h2>
+      <p style="font-size:1.5rem; font-weight:800; color:var(--color-primary-dark);" id="calories-maintenance">-</p>
+      <p>Calories to maintain your current weight.</p>
+    </div>
+    <div class="card">
+      <h2>Weight Loss</h2>
+      <p style="font-size:1.5rem; font-weight:800; color:var(--color-primary-dark);" id="calories-loss">-</p>
+      <p>A ~500 kcal deficit for steady fat loss.</p>
+    </div>
+    <div class="card">
+      <h2>Weight Gain</h2>
+      <p style="font-size:1.5rem; font-weight:800; color:var(--color-primary-dark);" id="calories-gain">-</p>
+      <p>A ~500 kcal surplus for lean muscle gain.</p>
+    </div>
+  </div>
+
+  <div class="page-stepper">
+    <a href="nutrition.html" class="btn btn-outline btn-sm">← Back: Nutrition</a>
+    <a href="schedule.html" class="btn btn-primary btn-sm">Next: Schedule →</a>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a href="home.html" class="bottom-nav-item">🏠<span>Home</span></a>
+  <a href="workout.html" class="bottom-nav-item">🏋️<span>Workouts</span></a>
+  <a href="exercises.html" class="bottom-nav-item">💪<span>Exercises</span></a>
+  <a href="calories.html" class="bottom-nav-item">🔥<span>Calories</span></a>
+  <a href="profile.html" class="bottom-nav-item">👤<span>Profile</span></a>
+  <a href="level.html" class="bottom-nav-item">🏆<span>Level</span></a>
+</nav>
+
+<script src="js/data.js"></script>
+<script src="js/bmi.js"></script>
+<script src="js/recommendation.js"></script>
+<script src="js/calories.js"></script>
+<script src="js/app.js"></script>
+<script src="logo.js"></script>
+</body>
+</html>

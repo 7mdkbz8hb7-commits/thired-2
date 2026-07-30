@@ -1,0 +1,230 @@
+/* Gamification dashboard UI (workout.html / level.html): glass-card panels,
+   workout/achievement cards, progress bars, celebration modal + confetti. */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 24px;
+}
+
+.dashboard-summary-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dashboard-summary-bar .glass-card {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+.dashboard-summary-bar .summary-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+
+.dashboard-summary-bar .summary-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+/* Workout cards (this week's workouts grid) */
+
+.workout-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.workout-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), opacity var(--transition-base);
+}
+
+.workout-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.workout-card.is-done { opacity: 0.75; }
+
+.workout-card-image {
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-primary-soft);
+}
+
+.workout-card-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.workout-card-body h3 { margin: 0; font-size: 1rem; }
+
+.workout-xp-tag {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* Editable weekly plan rows */
+
+.plan-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+
+.plan-icon { font-size: 1.4rem; }
+
+.plan-row select { flex: 1 1 160px; }
+
+.plan-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.plan-row input[type="number"] {
+  width: 70px;
+  padding: 8px 10px;
+}
+
+/* Progress bars */
+
+.progress-bar-track {
+  width: 100%;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-soft);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--color-primary-light), var(--color-primary-dark));
+  width: 0%;
+  transition: width 1s ease;
+}
+
+/* Commitment ring */
+
+.commitment-ring-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+
+.commitment-ring-wrap svg { transform: rotate(-90deg); }
+
+.commitment-ring-track { fill: none; stroke: var(--color-primary-soft); stroke-width: 10; }
+.commitment-ring-progress { fill: none; stroke: var(--color-primary); stroke-width: 10; stroke-linecap: round; }
+
+.commitment-ring-label {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+/* Achievements */
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.achievement-card {
+  text-align: center;
+  border-radius: var(--radius-md);
+  padding: 18px 12px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform var(--transition-base);
+}
+
+.achievement-card.is-unlocked {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+.achievement-card.is-locked { opacity: 0.45; filter: grayscale(0.6); }
+
+.achievement-icon { font-size: 1.8rem; display: block; margin-bottom: 8px; }
+.achievement-card h4 { margin: 0 0 4px; font-size: 0.9rem; }
+.achievement-card p { margin: 0; font-size: 0.75rem; color: var(--color-text-muted); }
+
+/* Celebration modal + confetti */
+
+.celebration-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 49, 31, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.celebration-modal {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  text-align: center;
+  max-width: 360px;
+  box-shadow: var(--shadow-lg);
+  animation: liftIn var(--transition-base);
+}
+
+.celebration-modal h2 { color: var(--color-primary-dark); margin-top: 0; }
+
+#confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 199;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -12px;
+  width: 8px;
+  height: 14px;
+  opacity: 0.9;
+  animation-name: confettiFall;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes confettiFall {
+  from { transform: translateY(0) rotate(0deg); opacity: 1; }
+  to { transform: translateY(100vh) rotate(360deg); opacity: 0.4; }
+}

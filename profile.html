@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Insights - Profile</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="profile">
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="home.html" class="nav-brand">🌿 Fitness Insights</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="workout.html">Workout</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="calories.html">Calories</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="level.html">Level</a></li>
+    </ul>
+    <div class="nav-user" id="nav-user-badge"></div>
+  </div>
+</nav>
+
+<div class="container page-shell">
+  <div class="page-header">
+    <h1>Your Profile</h1>
+    <p>Review and update the details behind your fitness plan.</p>
+  </div>
+
+  <div class="card" id="profile-view">
+    <h2 id="summary-name">-</h2>
+    <div class="profile-summary-grid">
+      <div class="profile-stat"><span class="stat-label">Email</span><span class="stat-value" id="summary-email">-</span></div>
+      <div class="profile-stat"><span class="stat-label">Height</span><span class="stat-value" id="summary-height">-</span></div>
+      <div class="profile-stat"><span class="stat-label">Weight</span><span class="stat-value" id="summary-weight">-</span></div>
+      <div class="profile-stat"><span class="stat-label">Age</span><span class="stat-value" id="summary-age">-</span></div>
+      <div class="profile-stat"><span class="stat-label">Gender</span><span class="stat-value" id="summary-gender">-</span></div>
+      <div class="profile-stat"><span class="stat-label">Goal</span><span class="stat-value" id="summary-goal">-</span></div>
+      <div class="profile-stat"><span class="stat-label">Activity Level</span><span class="stat-value" id="summary-activity">-</span></div>
+      <div class="profile-stat"><span class="stat-label">BMI</span><span class="stat-value" id="summary-bmi">-</span></div>
+      <div class="profile-stat"><span class="stat-label">BMI Category</span><span class="stat-value" id="summary-bmi-category">-</span></div>
+    </div>
+    <button type="button" class="btn btn-primary" id="edit-profile-btn" style="margin-top:20px;">Edit Profile</button>
+  </div>
+
+  <div class="card hidden" id="profile-edit-section" style="margin-top:24px;">
+    <h2>Edit Profile</h2>
+    <form id="profile-edit-form" novalidate>
+      <div class="form-group">
+        <label for="edit-fullName">Full Name</label>
+        <input type="text" id="edit-fullName" name="fullName" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="edit-height">Height (cm)</label>
+          <input type="number" id="edit-height" name="height" min="100" max="250" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-weight">Weight (kg)</label>
+          <input type="number" id="edit-weight" name="weight" min="30" max="300" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="edit-age">Age</label>
+          <input type="number" id="edit-age" name="age" min="10" max="100" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-gender">Gender</label>
+          <select id="edit-gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="edit-goal">Fitness Goal</label>
+        <select id="edit-goal" name="goal" required>
+          <option value="lose-weight">Lose Weight</option>
+          <option value="gain-muscle">Gain Muscle</option>
+          <option value="maintain">Maintain Weight</option>
+          <option value="endurance">Improve Endurance</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="edit-activityLevel">Activity Level</label>
+        <select id="edit-activityLevel" name="activityLevel" required>
+          <option value="sedentary">Sedentary (little or no exercise)</option>
+          <option value="light">Lightly Active (1-3 days/week)</option>
+          <option value="moderate">Moderately Active (3-5 days/week)</option>
+          <option value="active">Active (6-7 days/week)</option>
+          <option value="very-active">Very Active (hard exercise daily)</option>
+        </select>
+      </div>
+      <div style="display:flex; gap:12px;">
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="button" class="btn btn-outline" id="cancel-edit-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="page-stepper">
+    <a href="home.html" class="btn btn-outline btn-sm">← Back: Home</a>
+    <a href="workout.html" class="btn btn-primary btn-sm">Next: Workout →</a>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a href="home.html" class="bottom-nav-item">🏠<span>Home</span></a>
+  <a href="workout.html" class="bottom-nav-item">🏋️<span>Workouts</span></a>
+  <a href="exercises.html" class="bottom-nav-item">💪<span>Exercises</span></a>
+  <a href="calories.html" class="bottom-nav-item">🔥<span>Calories</span></a>
+  <a href="profile.html" class="bottom-nav-item">👤<span>Profile</span></a>
+  <a href="level.html" class="bottom-nav-item">🏆<span>Level</span></a>
+</nav>
+
+<script src="js/data.js"></script>
+<script src="js/bmi.js"></script>
+<script src="js/app.js"></script>
+<script src="js/profile-page.js"></script>
+<script src="logo.js"></script>
+</body>
+</html>

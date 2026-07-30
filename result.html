@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Insights - Your Results</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="result">
+
+<div class="container result-shell">
+
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+    <a href="index.html" class="auth-brand" style="margin-bottom:0;">🌿 Fitness Insights</a>
+    <a href="index.html" class="btn btn-outline btn-sm">← Back</a>
+  </div>
+
+  <div class="page-header">
+    <h1>Hi <span id="summary-name-result">there</span>, here's your plan</h1>
+    <p>Built from your profile - BMI, workouts, nutrition, and a weekly schedule.</p>
+  </div>
+
+  <nav class="result-nav">
+    <a href="#bmi-section">BMI</a>
+    <a href="#workout-section">Workout</a>
+    <a href="#nutrition-section">Nutrition</a>
+    <a href="#schedule-section">Schedule</a>
+  </nav>
+
+  <section class="card result-section" id="bmi-section">
+    <h2>Your BMI</h2>
+    <div class="bmi-badge">
+      <span id="bmi-value">-</span>
+      <span class="bmi-category" id="bmi-category">-</span>
+    </div>
+  </section>
+
+  <section class="card result-section" id="workout-section">
+    <h2 id="workout-title">-</h2>
+    <p id="workout-description">-</p>
+    <h3>Recommended Exercises</h3>
+    <ul class="tips-list exercise-list" id="exercise-list"></ul>
+    <h3>Cardio Advice</h3>
+    <p id="cardio-advice">-</p>
+  </section>
+
+  <section class="card result-section" id="nutrition-section">
+    <h2>Nutrition</h2>
+    <p id="nutrition-summary">-</p>
+    <ul class="tips-list" id="nutrition-tips"></ul>
+    <p><strong>Recommended Water Intake:</strong> <span id="water-intake">-</span></p>
+  </section>
+
+  <section class="card result-section" id="schedule-section">
+    <h2>Weekly Schedule</h2>
+    <ul class="schedule-list" id="schedule-list"></ul>
+  </section>
+
+  <section class="motivation-banner result-section" id="motivation-quote">-</section>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/bmi.js"></script>
+<script src="js/recommendation.js"></script>
+<script src="js/app.js"></script>
+<script src="logo.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Insights - Level</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body data-page="level">
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="home.html" class="nav-brand">🌿 Fitness Insights</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="workout.html">Workout</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="calories.html">Calories</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="level.html">Level</a></li>
+    </ul>
+    <div class="nav-user" id="nav-user-badge"></div>
+  </div>
+</nav>
+
+<div class="container page-shell">
+  <div class="page-header">
+    <h1>Your Progress</h1>
+    <p>Commitment, level, streak, and achievements - all in one dashboard.</p>
+  </div>
+
+  <div class="card-grid" style="margin-bottom:28px;">
+    <div class="glass-card" style="text-align:center;">
+      <h2>Commitment</h2>
+      <div class="commitment-ring-wrap">
+        <svg width="160" height="160" viewBox="0 0 140 140">
+          <circle class="commitment-ring-track" cx="70" cy="70" r="54"></circle>
+          <circle class="commitment-ring-progress" id="commitment-ring-progress" cx="70" cy="70" r="54"></circle>
+        </svg>
+        <span class="commitment-ring-label" id="commitment-ring-label">0%</span>
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <h2>Level</h2>
+      <p style="font-size:1.6rem; font-weight:800; color:var(--color-primary-dark);" id="level-badge-name">Bronze</p>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="level-xp-bar-fill"></div></div>
+      <p id="level-xp-text" style="margin-bottom:0; color:var(--color-text-muted); font-size:0.85rem;">0 / 200 XP to Silver</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>Streak</h2>
+      <p style="font-size:1.6rem; font-weight:800; color:var(--color-primary-dark);" id="streak-count">0 days</p>
+      <p style="color:var(--color-text-muted); font-size:0.85rem;">Keep completing workouts daily to grow your streak.</p>
+    </div>
+  </div>
+
+  <div class="profile-summary-grid" style="margin-bottom:28px;">
+    <div class="profile-stat"><span class="stat-label">Completed This Week</span><span class="stat-value" id="stat-completed">0</span></div>
+    <div class="profile-stat"><span class="stat-label">Remaining This Week</span><span class="stat-value" id="stat-remaining">0</span></div>
+    <div class="profile-stat"><span class="stat-label">Calories Burned</span><span class="stat-value" id="stat-calories">0 kcal</span></div>
+    <div class="profile-stat"><span class="stat-label">Total XP</span><span class="stat-value" id="stat-total-xp">0 XP</span></div>
+  </div>
+
+  <div class="card-grid" style="margin-bottom:28px;">
+    <div class="card">
+      <h2>Weekly Progress</h2>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="weekly-progress-bar"></div></div>
+    </div>
+    <div class="card">
+      <h2>Monthly Progress</h2>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="monthly-progress-bar"></div></div>
+    </div>
+    <div class="card">
+      <h2>XP Progress</h2>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="xp-progress-bar"></div></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Achievements</h2>
+    <div class="achievements-grid" id="achievements-grid"></div>
+  </section>
+
+  <div class="page-stepper">
+    <a href="schedule.html" class="btn btn-outline btn-sm">← Back: Schedule</a>
+    <a href="home.html" class="btn btn-primary btn-sm">Next: Home →</a>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a href="home.html" class="bottom-nav-item">🏠<span>Home</span></a>
+  <a href="workout.html" class="bottom-nav-item">🏋️<span>Workouts</span></a>
+  <a href="exercises.html" class="bottom-nav-item">💪<span>Exercises</span></a>
+  <a href="calories.html" class="bottom-nav-item">🔥<span>Calories</span></a>
+  <a href="profile.html" class="bottom-nav-item">👤<span>Profile</span></a>
+  <a href="level.html" class="bottom-nav-item">🏆<span>Level</span></a>
+</nav>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/fitness-state.js"></script>
+<script src="js/level-page.js"></script>
+<script src="logo.js"></script>
+</body>
+</html>

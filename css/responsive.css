@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Responsive overrides only. Loaded after style.css on every page.
+   Breakpoints: 1024px / 768px / 480px.
+   ========================================================================== */
+
+/* Bottom nav is a mobile/tablet convenience; top-nav already covers desktop. */
+@media (min-width: 901px) {
+  .bottom-nav { display: none; }
+  .page-shell { padding-bottom: 32px; }
+}
+
+@media (max-width: 1024px) {
+  .container { padding: 0 18px; }
+  .card-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .auth-card { padding: 32px; }
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 16px 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+  }
+
+  .nav-links.open {
+    max-height: 480px;
+  }
+
+  .nav-links a {
+    padding: 12px 10px;
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-username { display: none; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .bmi-badge { font-size: 1.9rem; }
+
+  .page-header h1 { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 14px; }
+  .card { padding: 18px; }
+  .auth-card { padding: 24px 20px; }
+  .auth-brand { font-size: 1.15rem; }
+
+  .btn { padding: 11px 20px; font-size: 0.95rem; }
+
+  .nav-brand { font-size: 1rem; }
+  .nav-avatar { width: 28px; height: 28px; font-size: 0.75rem; }
+
+  .bottom-nav-item span { font-size: 0.6rem; }
+
+  .exercise-card-image { height: 110px; }
+
+  .profile-summary-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+}

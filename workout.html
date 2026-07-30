@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Insights - Workout</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body data-page="workout">
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="home.html" class="nav-brand">🌿 Fitness Insights</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="workout.html">Workout</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="calories.html">Calories</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="level.html">Level</a></li>
+    </ul>
+    <div class="nav-user" id="nav-user-badge"></div>
+  </div>
+</nav>
+
+<div class="container page-shell">
+  <div class="page-header">
+    <h1 id="workout-title">Your Workout Plan</h1>
+    <p id="workout-description">-</p>
+  </div>
+
+  <div class="dashboard-summary-bar">
+    <div class="glass-card">
+      <span class="summary-label">Total XP</span>
+      <span class="summary-value" id="dashboard-total-xp">0 XP</span>
+    </div>
+    <div class="glass-card">
+      <span class="summary-label">Streak</span>
+      <span class="summary-value" id="dashboard-streak">0 days</span>
+    </div>
+    <div class="glass-card">
+      <span class="summary-label">Level</span>
+      <span class="summary-value" id="dashboard-level">Bronze</span>
+    </div>
+  </div>
+
+  <section class="card" style="margin-bottom:28px;">
+    <h2>Cardio Advice</h2>
+    <p id="cardio-advice">-</p>
+  </section>
+
+  <section style="margin-bottom:32px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+      <h2 style="margin:0;">This Week's Workouts</h2>
+      <button type="button" class="btn btn-outline btn-sm" id="reset-week-btn">Reset Week</button>
+    </div>
+    <div class="workout-cards-grid" id="workout-cards-grid"></div>
+  </section>
+
+  <section>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+      <h2 style="margin:0;">Your Editable Weekly Plan</h2>
+      <button type="button" class="btn btn-primary btn-sm" id="add-exercise-btn">+ Add Exercise</button>
+    </div>
+    <div id="workout-plan-list"></div>
+  </section>
+
+  <div class="page-stepper">
+    <a href="profile.html" class="btn btn-outline btn-sm">← Back: Profile</a>
+    <a href="exercises.html" class="btn btn-primary btn-sm">Next: Exercises →</a>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a href="home.html" class="bottom-nav-item">🏠<span>Home</span></a>
+  <a href="workout.html" class="bottom-nav-item">🏋️<span>Workouts</span></a>
+  <a href="exercises.html" class="bottom-nav-item">💪<span>Exercises</span></a>
+  <a href="calories.html" class="bottom-nav-item">🔥<span>Calories</span></a>
+  <a href="profile.html" class="bottom-nav-item">👤<span>Profile</span></a>
+  <a href="level.html" class="bottom-nav-item">🏆<span>Level</span></a>
+</nav>
+
+<div class="celebration-overlay hidden" id="celebration-modal">
+  <div class="celebration-modal">
+    <h2 id="celebration-title">Nice Work!</h2>
+    <p id="celebration-message">-</p>
+    <button type="button" class="btn btn-primary" id="celebration-close-btn">Keep Going</button>
+  </div>
+</div>
+<div id="confetti-container"></div>
+
+<script src="js/data.js"></script>
+<script src="js/bmi.js"></script>
+<script src="js/recommendation.js"></script>
+<script src="js/app.js"></script>
+<script src="js/fitness-state.js"></script>
+<script src="js/workout-page.js"></script>
+<script src="js/workout-editor.js"></script>
+<script src="logo.js"></script>
+</body>
+</html>

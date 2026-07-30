@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Insights - Exercises</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="exercises">
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="home.html" class="nav-brand">🌿 Fitness Insights</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="workout.html">Workout</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="calories.html">Calories</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="level.html">Level</a></li>
+    </ul>
+    <div class="nav-user" id="nav-user-badge"></div>
+  </div>
+</nav>
+
+<div class="container page-shell">
+  <div class="page-header">
+    <h1>Exercises for <span id="exercises-goal-label">Your Goal</span></h1>
+    <p>A curated set of exercises matched to your current fitness goal.</p>
+  </div>
+
+  <div class="card-grid" id="exercise-list"></div>
+
+  <div class="page-stepper">
+    <a href="workout.html" class="btn btn-outline btn-sm">← Back: Workout</a>
+    <a href="nutrition.html" class="btn btn-primary btn-sm">Next: Nutrition →</a>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a href="home.html" class="bottom-nav-item">🏠<span>Home</span></a>
+  <a href="workout.html" class="bottom-nav-item">🏋️<span>Workouts</span></a>
+  <a href="exercises.html" class="bottom-nav-item">💪<span>Exercises</span></a>
+  <a href="calories.html" class="bottom-nav-item">🔥<span>Calories</span></a>
+  <a href="profile.html" class="bottom-nav-item">👤<span>Profile</span></a>
+  <a href="level.html" class="bottom-nav-item">🏆<span>Level</span></a>
+</nav>
+
+<script src="js/data.js"></script>
+<script src="js/bmi.js"></script>
+<script src="js/recommendation.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/exercises.js"></script>
+<script src="js/app.js"></script>
+<script src="logo.js"></script>
+</body>
+</html>
